@@ -8,5 +8,19 @@
 function lonelyinteger(a) {
     // Write your code here
     let hash = {};
-    for()
+    for(let i of a){
+        if(hash[i] !== undefined){
+            hash[i]++;
+        }
+        else{
+            hash[i] = 1;
+        }
+    }
+    for(let i in hash){
+        if(hash[i] === 1){
+            return i;
+        }
+    }
 }
+
+console.log(lonelyinteger([1,2,3,4,3,2,1]));
